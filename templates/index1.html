@@ -1,0 +1,173 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'navigation.css' %}">
+    <link rel="stylesheet" href="{% static 'style1.css' %}">
+    <link rel="stylesheet" href="{% static 'footer.css' %}">
+</head>
+
+<body>
+    {% for message in messages %}
+    <div class="alert alert -{{message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Alert !</strong>{{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+
+    <!-- <script>
+    function openNewHtmlPage() {
+    window.open("form1.html", "_blank");
+} -->
+
+    <!-- </script>  -->
+    <header>
+        <!-- navigation bar -->
+        <nav id="navigation-bar">
+            <h1 class="logo">Mock Interview</h1>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="{% url 'questions' %}">Questions</a></li>
+                <li><a href="{% url 'information' %}">Form</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- main-container -->
+    <section id="home">
+        <main class="home-item">
+            <h1 class="hero">PRACTICE MAKES PERFECT</h1>
+            <p class="home-para">This plateform is build for Interview question prepration.It helps to improve your
+                performance and helps to build your confidence . </p>
+            <div class="home-btn">
+                <!-- <a href="{% url 'questions' %}">Get Started</a>   -->
+                <button onclick="newpage()"><a href="{% url 'questions' %}">Get Started</a></button>
+            </div>
+
+        </main>
+        <!-- <div class="home Instructions">
+            <h1>Instructions</h1>
+        <ul>
+            <li>  Fill out the form with your details, including your name, email address, and preferred programming language.</li>
+            <li>Upload a practice video of yourself answering the basic questions provided.</li>
+            <li>Choose the level of difficulty (e.g., beginner, intermediate, or advanced).</li>
+            <li>Submit your video for feedback.</li>
+        </ul>
+        </div>  -->
+    </section>
+    <!-- ******************************** -->
+    <!-- <section id="home-Instructions">
+            <div class="intro">
+            <div class="intro-items">
+                <h1 class="intro-head">Instructions </h1>
+                <div class="intro-para">
+                    <p>1.Fill out the form with your details, including your name, email address, and preferred programming language.</p>
+                    <p>2.Upload a practice video of yourself answering the basic questions provided.</p>
+                    <p>3.Choose the level of difficulty (e.g., beginner, intermediate, or advanced).</p>
+                    <p>4.Submit your video which is created by yourself.</p>
+                    <p>5.Receive personalized feedback on your performance </p>
+                </div>
+                <div id="Benefits">
+                    <h1 class="Benefits-head">Benefits</h1>
+                    <ul class="Benefits-ul">
+                        <li> •	Enhanced interview confidence preparedness </li>
+                        <li> •	Improved communication and presentation skills</li>
+                        <li>•	Identification of areas for improvement and personalized feedback</li>
+                        <li> •	Opportunity to showcase personality and skills through video </li>
+                        <li>•Increased chances of success in job interviews</li>
+                            
+                    </ul>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="./Imges/hero-img (1).png" alt="" > -->
+                <!-- <div class="box1"></div> -->
+<section id="home-Instructions">
+    <div class="intro">
+    <div class="intro-items">
+        <h1 class="intro-head">Instructions </h1>
+        <div class="intro-para">
+            <p>1.Fill out the form with your details, including your name, email address, and preferred programming language.</p>
+            <p>2.Upload a practice video of yourself answering the basic questions provided.</p>
+            <p>3.Choose the level of difficulty (e.g., beginner, intermediate, or advanced).</p>
+            <p>4.Submit your video which is created by yourself.</p>
+            <p>5.Receive personalized feedback on your performance </p>
+        </div>
+        <div id="Benefits">
+            <h1 class="Benefits-head">Benefits</h1>
+            <ul class="Benefits-ul">
+                <li> •	Enhanced interview confidence preparedness </li>
+                <li> •	Improved communication and presentation skills</li>
+                <li>•	Identification of areas for improvement and personalized feedback</li>
+                <li> •	Opportunity to showcase personality and skills through video </li>
+                <li>•Increased chances of success in job interviews</li>
+                    
+            </ul>
+        </div>
+    </div>
+    <!-- <div class="intro-image">
+        <img src="./Imges/hero-img (1).png" alt="" > -->
+        <!-- <div class="box1"></div> -->  
+        <!-- <div class="box1"></div> --> 
+    </div>
+    </div>
+    
+</div>
+</section> 
+<!-- <section id="About-us" > -->
+    <section id="About-us">
+    <div class="About">
+    <div class="About-item">
+        <h1 class="About-head">About Us</h1>
+        <div class="About-para">
+    <p>1.Question Bank: A vast collection of frequently asked interview questions categorized by job type and industry.</p> 
+    <p>2.Mock Interview Simulator: A realistic interview simulation environment where users can practice answering questions and receive feedback.</p>
+    <p>3.Video Recording and Playback: Users can record their mock interview responses and review them later to identify areas for improvement.</p>
+    <p>4.AI-Powered Feedback: The system provides AI-powered feedback on users' interview performance, analyzing their body language, tone of voice, and overall presentation.</p>
+    <p>5.Expert Tips and Guides: Access to a library of expert tips and guides on various aspects of interview preparation, including common interview questions, effective communication strategies, and body language cues.</p>
+    <p>6.Personalized Mock Interview Plans: Users can create personalized mock interview plans tailored to their specific job goals and industry experience.</p>
+    <p>7.Shareable Video CV: Users can create and share their recorded mock interview responses as a video CV to showcase their personality and skills to potential employers.</p>
+    </div>
+    </div>
+    </div>
+
+
+
+</section> 
+<!-- footer -->
+
+    <!-- footer -->
+
+    <section>
+        <footer>
+            <div class="footer">
+                <h1 class="footer-head">Join us now :</h1>
+            </div>
+            <div class="icons">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-linkedin"></i>
+                <i class="fa-brands fa-youtube"></i>
+            </div>
+            <div class="Contact-us">
+                <div class="Contact">Contact us at:</div>
+                <div class="email"><a href="">Mockinterview@1234gmail.com</a></div>
+            </div>
+            </div>
+
+        </footer>
+    </section>
+    <script src="{% static 'script.js' %}">
+
+    </script>
+
+
+</body>
+
+</html>

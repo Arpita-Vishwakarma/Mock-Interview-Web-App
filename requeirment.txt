@@ -1,0 +1,16 @@
+1. Django should be installed
+2. You need to have a database set up in your settings file (you can use SQLite for testing)
+3. Run the following command: python manage.py migrate
+4. Create an admin user by running this command: python manage.py createsuperuser
+5. Start the server with this command: python manage.py runserver
+6. Open your browser and go to http://localhost:8000/admin/login/?next=/admin/
+7. Log into the admin site using the credentials you created above
+8. Go back to the terminal or command prompt where you ran the server, press Ctrl+C to stop it
+9. Now that you've made changes to models, you will need to re-run these commands:
+- python manage.py makemigrations
+- python manage.py migrate
+- python manage.py createsuperuser
+- python manage.py runserver
+10. If everything is working correctly, you should see "Welcome to Django" on the page at http://localhost:8000
+Note: If you want to add new apps to your project, follow these steps:
+1. In your project directory, create a new folder called "apps"

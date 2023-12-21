@@ -1,0 +1,41 @@
+footer{
+    height: 100%;
+    width: 100vw;
+    background-color: #b8def5;
+    display: flex;
+   
+}
+
+.footer{
+    font-size: 20px;
+    padding: 15px;
+    margin-left: 100px;
+   
+}
+.fa-brands{
+    font-size: 50px;
+   
+}
+.fa-instagram{
+    padding: 15px;
+}
+.fa-linkedin{
+    padding: 15px;
+}
+.fa-youtube{
+    padding: 15px;
+}
+.Contact-us{
+    display: flex;
+  margin: 30px;
+}
+.Contact{
+    font-size: 20px;
+    font-weight: 20px;
+    margin-left: 70px;
+}
+.email{
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: 10px;
+}

@@ -1,0 +1,182 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=,. initial-scale=1.0" />
+    <title>Question page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/x.x.x/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'footer.css' %}" />
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* overflow: hidden; */
+    }
+    
+    .logo {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      background-color: antiquewhite;
+      padding: 30px;
+      height: 100%;
+      width: 100vw;
+    }
+    
+    .Dashboard-item {
+      height: 800px;
+      width: 100%;
+    }
+    
+    #cards {
+      height: 100%;
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      margin-left: 20px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      align-items: center;
+    }
+    
+    .card1 {
+      flex-direction: column;
+      height: 200px;
+      width: 400px;
+      background-image: linear-gradient(45deg, rgb(192, 235, 232), rgb(189, 189, 244));
+      /* border: 1px solid black; */
+      border-radius: 20px;
+    }
+    
+    .head {
+      text-align: center;
+      padding: 50px;
+    }
+    
+    .card-btn {
+      text-align: center;
+      height: 40px;
+      width: 125px;
+      background-color: rgb(238, 230, 230);
+      border-radius: 80px;
+      margin-left: 140px;
+    }
+    .card1 a {
+      text-decoration: none;
+      color: black;
+    }
+    .footer {
+      background-color: antiquewhite;
+      font-size: large;
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+
+  <body>
+    <header>
+      <h1 class="logo">Dashboard</h1>
+    </header>
+    <section class="Dashboard-item">
+      <div id="cards">
+        <div class="card1">
+          <h1 class="head">C Language</h1>
+          <button class="card-btn"><a href="{% url 'clanguage' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">C++ Language</h1>
+          <button class="card-btn"><a href="{% url 'Cpp' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">Java Language</h1>
+          <button class="card-btn"><a href="{% url 'java' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">Python Language</h1>
+          <button class="card-btn"><a href="{% url 'python' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">MYSQL</h1>
+          <button class="card-btn"><a href="{% url 'mysql' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">Node Js</h1>
+          <button class="card-btn"><a href="{% url 'Nodejs' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">Java Script Language</h1>
+          <button class="card-btn"><a href="{% url 'js' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">HTML</h1>
+          <button class="card-btn"><a href="{% url 'html' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">CSS</h1>
+          <button class="card-btn"><a href="{% url 'css' %}">Start practice</a></button>
+        </div>
+        <div class="card1">
+          <h1 class="head">MYSQL</h1>
+          <button class="card-btn">Start practice</button>
+        </div>
+        <div class="card1">
+          <h1 class="head">C# Language</h1>
+          <button class="card-btn">Start practice</button>
+        </div>
+        <div class="card1">
+          <h1 class="head">Java Script Language</h1>
+          <button class="card-btn">Start practice</button>
+        </div>
+        <div class="card1">
+          <h1 class="head">HTML</h1>
+          <button class="card-btn">Start practice</button>
+        </div>
+        <div class="card1">
+          <h1 class="head">CSS</h1>
+          <button class="card-btn">Start practice</button>
+        </div>
+      </div>
+    </section>
+    <!-- ... (your existing code above) ... -->
+    {% comment %}
+    <section>
+      <footer>
+        <div class="footer">
+          <h1 class="footer-head">Join us now:</h1>
+        </div>
+        <div class="icons">
+          <!-- Font Awesome icons -->
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-linkedin"></i>
+          <i class="fab fa-youtube"></i>
+          <!-- Add other social media icons as needed -->
+        </div>
+        <div class="Contact-us">
+          <div class="Contact">Contact us at:</div>
+          <div class="email">
+            <a href="mailto:Mockinterview@1234gmail.com">Mockinterview@1234gmail.com</a>
+          </div>
+        </div>
+      </footer>
+    </section> {% endcomment %}
+
+    <!-- *********** -->
+    <script>
+      // Your existing JavaScript functions remain unchanged
+      function newpage() {
+        window.open('C.html', '_blank')
+      }
+      function cpppage() {
+        window.open('C++.html', '_blank')
+      }
+      function javapage() {
+        window.open('java.html', '_blank')
+      }
+      function pythonpage() {
+        window.open('python.html', '_blank')
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,191 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Student Information Form</title>
+    <link rel="stylesheet" href="{% static 'form1.css' %}">
+</head>
+
+<body>
+    {% for message in messages %}
+    <div class="alert alert -{{message.tags }} alert-dismissible fade show" role="alert">
+        <strong>Alert !</strong>{{message}}
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    {% endfor %}
+    <h1>Fill the Form</h1>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+
+
+
+    <!-- Create Form -->
+    {% comment %} <form id="form" method="post" action="/questions/" enctype="multipart/form-data">
+        {% csrf_token %}
+
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text" name="User_name" id="name" placeholder="Enter your name" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            <!-- Input Type Email-->
+            <input type="email" name="User_email" id="email" placeholder="Enter your email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Contact No.
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="number" name="User_contact" id="Contact No." placeholder="Enter your Contact No." />
+        </div>
+        <div class="form-control">
+            <label for="">Enrollment No.</label>
+            <input type="text" name="User_rollnum" id="" placeholder="Enter your Enroll No.">
+
+        </div>
+
+        <div class="form-control">
+            <label for="role" id="label-role">
+                select your course:
+            </label>
+
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="student" name="Course_option">BSC(cs)</option>
+                <option value="intern" name="Course_option">B.Tech(CS)</option>
+                <option value="professional" name="Course_option">MCA</option>
+                <option value="other" name="Course_option">Other</option>
+            </select>
+        </div>
+
+        <div class="language-items">
+            <label class="label">
+                Topic You Choose :
+            </label><br><br>
+
+            <!-- Input Type Radio Button -->
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">C Language</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">C++</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">Java</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">Java Script</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">HTML</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">CSS</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">Data Science</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">MYSQL</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">Data Structure</input>
+            </label>
+            <label for="recommed" class="language">
+                <input type="radio" id="recommed" name="Topic">Python</input>
+            </label>
+
+
+
+        </div>
+
+        <div class="form-control">
+            <label for="Upcoming Interview Date" class="date">
+                Upcoming Interview Date:
+            </label>
+            <input type="date" name="Interview_date" id="Upcoming Interview Date">
+            <!-- Input Type Checkbox -->
+            <!-- <label for="inp-1">
+                    <input type="checkbox"
+                        name="inp">C</input></label>
+                <label for="inp-2">
+                    <input type="checkbox"
+                        name="inp">C++</input></label>
+                <label for="inp-3">
+                    <input type="checkbox"
+                        name="inp">C#</input></label>
+                <label for="inp-4">
+                    <input type="checkbox"
+                        name="inp">Java</input></label>
+                <label for="inp-5">
+                    <input type="checkbox"
+                        name="inp">Python</input></label>
+                <label for="inp-6">
+                    <input type="checkbox"
+                        name="inp">JavaScript</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                        name="inp">React</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                        name="inp">Angular</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                        name="inp">Django</input></label>
+                <label for="inp-7">
+                    <input type="checkbox"
+                        name="inp">Spring</input></label> -->
+        </div>
+        <div class="form-control">
+            <label for="comment">Upload Your Resume:</label>
+            <input type="file" name="Resume">
+
+        </div>
+        <div class="form-control">
+            <label for="comment">Upload YOur Video:</label>
+            <input type="file" name="Video">
+
+        </div>
+
+
+
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+
+            <!-- multi-line text input control -->
+            <textarea name="Suggestions" id="comment" placeholder="Enter your comment here">
+                </textarea>
+        </div>
+
+        <!-- Multi-line Text Input Control -->
+        <button type="submit" value="submit">
+            Submit
+        </button>
+    </form>
+--> {% endcomment %}
+
+</body>
+
+</html>
